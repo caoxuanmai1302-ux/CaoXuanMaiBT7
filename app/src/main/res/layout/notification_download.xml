@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đang tải..."
+        android:textStyle="bold"
+        android:textSize="14sp"/>
+
+    <ProgressBar
+        android:id="@+id/prog"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_below="@id/txtTitle"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="0"/>
+
+    <LinearLayout
+        android:id="@+id/actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prog"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btnPause"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Pause"
+            android:src="@android:drawable/ic_media_pause"/>
+
+        <ImageButton
+            android:id="@+id/btnResume"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Resume"
+            android:src="@android:drawable/ic_media_play"/>
+
+        <ImageButton
+            android:id="@+id/btnCancel"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="Cancel"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+    </LinearLayout>
+</RelativeLayout>
